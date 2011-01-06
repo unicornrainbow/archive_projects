@@ -7,10 +7,10 @@ class Projects < Thor
       unless entry =~ /^\.|^[\d]{4}|#{move_to_dir}/
         case ask "#{entry} (move/junk) or skip: "
         when /^m(ove)?$/
-          FileUtils.mkdir move_to_dir unless FileUtils.exists move_to_dir
+          FileUtils.mkdir move_to_dir unless File.exists? move_to_dir
           FileUtils.mv entry, move_to_dir
         when /^j(unk)?$/
-          FileUtils.mkdir '.junk' unless FileUtils.exists '.junk'
+          FileUtils.mkdir '.junk' unless File.exists? '.junk'
           FileUtils.mv entry, '.junk'
         end
       end
