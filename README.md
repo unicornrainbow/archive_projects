@@ -1,9 +1,9 @@
 Introduction
 ============
 
-A ruby script that is used for archiving old projects littering up our directory.
+Archive old projects littering up your directory.
 
-Use from thor
+Use from [thor](https://github.com/wycats/thor)
 
     thor projects:archive
 
